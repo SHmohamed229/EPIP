@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "year": 2010,
+      "amount": 140000,
+      "colorCode": "green"
+    },
+    {
+      "year": 2015,
+      "amount": 190000,
+      "colorCode": "red"
+    },
+    {
+      "year": 2020,
+      "amount": 460000,
+      "colorCode": "blue"
+    },
+    {
+      "year": 2023,
+      "amount": 572556,
+      "colorCode": "yellow"
+    }
+  ],
+  "users": [
+    {
+      "fName": "mohamed",
+      "lName": "sh",
+      "email": "admin@123.com",
+      "username":"admin",
+      "password": "123",
+      "rememberMe": "",
+      "role": "admin",
+      "isActive": true,
+      "id": "admin"
+    }
+  ]
+}

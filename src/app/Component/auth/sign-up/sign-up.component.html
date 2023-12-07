@@ -1,0 +1,45 @@
+<div  class="flex flex-column flex-auto align-items-center
+              sm:justify-content-center min-w-0 md-w-0 md:p-4 pt-3"  >
+    <div  class="sm:w-auto sm:px-8 sm:py-5 sm:border-round sm:shadow-7">
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+          <div class="w-100 mw-100">
+            <div class="text-center">
+              <img src="assets/img/login-logo.jpg" alt="" height="100" class="mb-3">
+              <div class="font-semibold text-4xl  text-600">
+                {{'sign-up.sign-up' | translate}}
+              </div>
+            </div>
+            <div class=" font-medium align-items-baseline flex justify-content-center mt-3 mb-3 text-center">
+              <span class="text-center">{{'sign-up.already-have-account' | translate}}</span>
+              <a  class="font-medium no-underline ml-2 text-primary cursor-pointer"
+                  [routerLink]="['/login-t']">
+                  {{'sign-up.sign-in' | translate}}
+              </a>
+            </div>
+            <div class="mb-1">
+              <label for="txtFname" class="form-label">{{'sign-up.first-name' | translate}}</label>
+              <input class="p-inputtext-sm form-control" id="txtFname"  type="text" pInputText formControlName="fName" />
+            </div>
+            <div class="mb-1">
+              <label for="txtLname" class="form-label">{{'sign-up.last-name' | translate}}</label>
+              <input class="p-inputtext-sm form-control" id="txtLname"  type="text" pInputText formControlName="lName" />
+            </div>
+            <div class="mb-1">
+              <label for="txtEmail" class="form-label">{{'sign-up.email' | translate}}</label>
+              <input class="p-inputtext-sm form-control" id="txtEmail"  type="email" pInputText formControlName="email" />
+            </div>
+            <div class="mb-3">
+              <label for="txtPass" class="form-label">{{'sign-up.password' | translate}}</label>
+              <span class="p-float-label">
+                <input class=" form-control" id="password" type="password" pInputText formControlName="password" />
+                  <p-password inputId="password" [(ngModel)]="value11"></p-password>
+              </span>
+            </div>
+
+            <button pButton class="w-full"
+            label="{{'sign-up.sign-up' | translate}}"
+            ></button>
+          </div>
+        </form>
+    </div>
+</div>

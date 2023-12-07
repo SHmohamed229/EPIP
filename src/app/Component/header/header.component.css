@@ -1,0 +1,30 @@
+:root
+{
+  --color-1: #CD1818;
+  --color-2: #D9D9D9;
+  --color-3: #141414;
+}
+
+
+span
+{
+  /* color: #000; */
+  font-size: 20px;
+  font-weight: 100px;
+  color: transparent;
+  /* text-shadow: 0 0 0 #33333333; */
+  background: linear-gradient(
+  220deg,
+  var(--color-1) 19%,
+  transparent 19%, transparent 20%,
+  var(--color-2) 20%, var(--color-2) 39%,
+  transparent 39%, transparent 40%,
+  var(--color-3) 40%, var(--color-3) 69%,
+
+);
+
+}
+.plogo
+{
+  margin-top: -15px;
+}

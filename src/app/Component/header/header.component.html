@@ -1,0 +1,116 @@
+
+<!-- navbar-->
+<header class="header">
+  <!-- Primary Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light py-2 border-bottom border-gray bg-white">
+    <div class="container d-flex align-items-center justify-content-beween">
+      <a class="navbar-brand mt-2" href="#" style="color: cornflowerblue; font-size: 40px; font-weight: bold;">
+        EPIP <span class=" text-muted text-uppercase mb-0 text-small">
+          Egypt Prisons</span><p class="plogo small text-gray mt-2">
+            Information Portal</p>
+          </a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseExample" aria-controls="#collapseExample" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-beat fa-2xl"></i>
+      </button>
+
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-beat fa-2xl"></i>
+      </button> -->
+<!--
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-beat fa-2xl"></i>
+      </button> -->
+
+
+      <ul class="list-inline mb-0 d-none d-lg-block">
+        <li class="list-inline-item mr-3">
+          <div class="d-flex">
+            <i class="far fa-clock h5 text-muted"></i>
+            <div class="ml-2">
+              <h6 class="text-muted text-uppercase mb-0 text-small">Mon - Fri: 08:00AM - 20:00PM  </h6>
+              <p class="small text-gray mb-0">Saturday and Sunday - CLOSED</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-inline-item">
+          <div class="d-flex">
+            <div class="ml-2">
+              <h6 class="text-muted text-uppercase mb-0 text-small"></h6>
+              <img src="https://www.raed.net/img?id=224177" alt="imgggggg" srcset="">
+              <p class="small text-gray mb-0"><a href="">Contact Us For Help</a> </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Secondary Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary  py-0 shadow-sm bg-white">
+    <div class="container">
+      <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item  ">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact </a>
+          </li>
+          <!-- <div class="dropdown">
+            <button class="btn btn-none dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Services
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div> -->
+        <!--Select Services-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Support for visitors</a></li>
+              <li><a class="dropdown-item" href="#">What you will need</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Find a prisoner</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--Search field-->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #query (keyup)="filter(query.value)">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <!--Select Languages-->
+        <div  class=" ml-4">
+          <p-dropdown [options]="selectLang" [(ngModel)]="selectedlanguage"  optionLabel="name" (onChange)="changeSiteLanguage($event.value)">
+            <ng-template pTemplate="selectedItem" >
+                <div class="country-item country-item-value" *ngIf="selectedlanguage">
+                    <div>
+                      <img width="20px" [src]="'assets/img/'+selectedlanguage.resource" class="mr-2" />
+                      {{selectedlanguage.name}}
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template let-language pTemplate="item">
+                <div class="language-item">
+                  <img width="20px" [src]="'assets/img/'+language.resource" class="mr-2" />
+                    <div>{{language.name}}</div>
+                </div>
+            </ng-template>
+          </p-dropdown>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+

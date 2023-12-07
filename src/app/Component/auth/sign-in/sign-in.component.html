@@ -1,0 +1,53 @@
+<div  class="flex flex-column flex-auto align-items-center
+              sm:justify-content-center min-w-0 md-w-0 md:p-4 pt-3"  >
+    <div  class="sm:w-auto sm:px-8 sm:py-5 sm:border-round sm:shadow-7">
+        <form [formGroup]="signInForm">
+          <div class="w-100 mw-100">
+            <div class="text-center">
+              <img src="assets/img/login-logo.jpg" alt="" height="100" class="mb-3">
+              <div class="font-semibold text-4xl  text-600">
+                {{'sign-in.sign-in' | translate}}
+              </div>
+            </div>
+            <div class=" font-medium align-items-baseline flex justify-content-center mt-4 mb-4 text-center">
+              <span class="text-center">{{'sign-in.dont-have-account' | translate}}</span>
+              <a  class="font-medium no-underline ml-2 text-primary cursor-pointer"
+                  [routerLink]="['/register']">
+                  {{'sign-in.sign-up' | translate}}
+              </a>
+            </div>
+            <div class="mb-3">
+              <label for="txtEmail" class="form-label">{{'sign-in.email' | translate}}</label>
+              <input class="p-inputtext-sm form-control" id="txtEmail"  type="email" pInputText formControlName="email" />
+            </div>
+            <div class="mb-3">
+              <label for="txtPass" class="form-label">{{'sign-in.password' | translate}}</label>
+              <span class="p-float-label">
+                <input class=" form-control" id="password" type="password" pInputText [formControlName]="'password'" />
+                  <p-password inputId="password" [(ngModel)]="value11"></p-password>
+              </span>
+            </div>
+            <div class="d-flex align-content-center justify-content-between mb-3">
+              <div class="d-flex align-content-center">
+                <p-checkbox
+                  label="{{'sign-in.remember-me' | translate}}"
+                  id="checkRememberMe"
+                  [(ngModel)]="value"
+                  [binary]="true"
+                  [formControlName]="'rememberMe'"
+                  >
+                </p-checkbox>
+              </div>
+              <a  class="font-medium no-underline ml-2 text-primary cursor-pointer"
+              [routerLink]="['/recover']">
+              {{'sign-in.forget-password' | translate}}
+              </a>
+            </div>
+            <button pButton class="w-full"
+            label="{{'sign-in.log-in' | translate}}"
+            (click)="login()"
+            ></button>
+          </div>
+        </form>
+    </div>
+</div>

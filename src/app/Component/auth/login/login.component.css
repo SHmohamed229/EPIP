@@ -1,0 +1,95 @@
+
+section
+{
+  background-image: url('/assets/img/bg.jpg');
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /*  hide scrollbars */
+    opacity: .9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    color: #102c58;
+}
+
+
+.wrapper {
+  width: 440px;
+  /* border: 1px solid #000; */
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  margin: 100px auto 30px;
+  /* margin-top: 50%; */
+
+}
+.content {
+  flex: 50%;
+  background-color: white;
+  text-align: center;
+  /* padding-left: 30px; */
+  border-radius: 10px;
+}
+.content h1 {
+  padding: 20px 0 10px;
+  color: #578ebe;
+  font-weight: bold;
+  font-size: 25px;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 250px;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  /* z-index: 15; */
+  box-shadow: 0px 0px  8px #6c6a6a;
+
+  margin-top: 30%;
+}
+.left-image {
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+  width: 453px;
+  height: 356px;
+  background-image: url('https://eprisons.nic.in/citizenservice/Content/Images/citizen.png');
+  background-repeat: no-repeat;
+}
+
+.right-image {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  width: 453px;
+  height: 356px;
+  background-image: url('https://eprisons.nic.in/citizenservice/Content/Images/prison.png');
+  background-repeat: no-repeat;
+}
+
+.otpButton, .otpButton2 {
+  padding: 6px 25px;
+  margin-top: 50px;
+  font-size: 16px;
+  border: none;
+  background-color: #578ebe;
+  /* background: linear-gradient(to right, #4568DC, #B06AB3); */
+  border-radius: 20px;
+  transition: 0.3s;
+  color: #fff;
+  transition: 0.5s ease;
+}
+.otpButton:hover{
+  transform: scale(1.3);
+}

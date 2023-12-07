@@ -1,0 +1,41 @@
+
+<section >
+<div class="wrapper">
+      <div class="card content text-center">
+          <h1 class="mb-1">Login to your Account</h1>
+          <form [formGroup]="loginForm" >
+            <div class="w-50 mw-100 m-auto">
+
+              <div class="mb-2">
+                  <!-- <label class="form-label" for="txtEmail">Please enter your mobile number.</label> -->
+                  <input class="p-inputtext-sm form-control" id="txtEmail" pInputText placeholder="your Email" formControlName="username">
+              </div>
+              <div class="mb-1">
+                  <!-- <input class="p-inputtext-sm form-control" id="password" type="password" pInputText [formControlName]="'password'" /> -->
+                  <input class="p-inputtext-sm form-control" type="password" id="password" pInputText placeholder="********" formControlName="password">
+                    <p-password inputId="password" [(ngModel)]="value11"></p-password>
+              </div>
+              <div class=" font-medium align-items-baseline flex justify-content-center mt-2 mb-1 text-center">
+                <span class="text-center">{{'sign-in.dont-have-account' | translate}}</span>
+                <a  class="font-medium no-underline ml-2 text-primary cursor-pointer"
+                    [routerLink]="['/register']">
+                    {{'sign-in.sign-up' | translate}}
+                </a>
+              </div>
+              <div class="">
+                  <!-- <button class="btn btn-outline-info col-12">Send Otp</button>
+                  <br> <br> -->
+
+                  <!-- <input type="submit" name="submit" class="otpButton" style=" width: auto; margin-top: 1px;"  value="Login"> -->
+                  <button pButton class="w-60" type="button" (click)="login()"
+                  label="{{'sign-in.log-in' | translate}}"
+                  ></button>
+              </div>
+            </div>
+          </form>
+      </div>
+</div>
+  <div class="left-image"></div>
+  <div class="right-image"></div>
+</section>
+

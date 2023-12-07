@@ -1,0 +1,25 @@
+
+.registion_head {
+  background: #578ebe;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.registion_head .col-lg-12 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  padding: 7px 15px;
+  width: 100%;
+  float: left;
+}
+footer
+{
+  padding: 20px;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+span
+{
+  color: cornflowerblue;
+}

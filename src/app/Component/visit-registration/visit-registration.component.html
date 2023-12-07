@@ -1,0 +1,388 @@
+<!-- <app-header-second></app-header-second> -->
+<div class="page-content-wrapper">
+  <div class="registion_head">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">New Visitor Registration</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ContentPlaceHolder1_PanelMain" style="width: 100%;">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="http://" target="_blank">
+            <h5 style="color: red;
+            font-size: 15px;">Click here for help </h5>
+          </a>
+        </div>
+        <div class="col-md-6 text-right text-red">
+          Valid Characters include A-z, 0-9 and space.
+        </div>
+      </div>
+
+      <form [formGroup]="myForm">
+      <div class="row">
+  <!-- Form TO Visitor -->
+        <div class="col-sm-6 col-lg-6">
+          <div class="ContentPlaceHolder1_UpdatePanelVisitor">
+            <div class="panel-default">
+              <div class="panel-heading">
+                <div class="panel-title">
+                  Visitor Details
+                </div>
+              </div>
+              <div class="boder">
+                <div class="row">
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        <label  for="visitorName">Visitor Name</label>
+                        <span id="ContentPlaceHolder1_Label1" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator5" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <input name="visitorName" formControlName="visitorName"
+                      type="text" maxlength="30" id="visitorName"
+                      style="border-width:1px;border-style:solid;"
+                      (ngModel)="visitorDataDto.visitorName"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        <label for="FatherName">Father / Husband Name</label>
+                        <span id="ContentPlaceHolder1_Label1" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator5" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <input name="FatherName"  formControlName="vFatherName"
+                      type="text" maxlength="30" id="FatherName"
+                      style="border-width:1px;border-style:solid;"
+                      (ngModel)="visitorDataDto.fatherName"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Address
+                        <span id="ContentPlaceHolder1_Label9" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator6" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <input name="address"  formControlName="address" type="text"
+                      maxlength="150" id="address"
+                      style="border-width:1px;border-style:solid;"
+                      (ngModel)="visitorDataDto.address"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Gender
+                        <span id="ContentPlaceHolder1_Label10" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator1" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <select name="" formControlName="genderV" id="gender" class="chosen-select" >
+                        <option value="SELECT">SELECT</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                        <option value="SELECT">SELECT</option>
+                      (ngModel)="visitorDataDto.gender"
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                          Age
+                        <span id="ContentPlaceHolder1_Label10" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator1" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <input name="age" formControlName="age" type="number"
+                      maxlength="3" id="age"  [min]="16" [max]="90"
+                      style="border-width:1px;border-style:solid;"
+                      (ngModel)="visitorDataDto.age"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Relation
+                        <span id="ContentPlaceHolder1_Label10" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator1" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <select name="" formControlName="relation" id="ContentPlaceHolder1_ddlVisRelationship" class="chosen-select " >
+                        <option value="SELECT">SELECT</option>
+                        <option value="FA">Father</option>
+                        <option value="MO">Mother</option>
+                        <option value="HW">Husband / Wife</option>
+                        <option value="BR">Brother</option>
+                        <option value="SI">Sister</option>
+                        <option value="SO">Son</option>
+                        <option value="DA">Daughter</option>
+                        <option value="AU">Aunt</option>
+                        <option value="BL">Brother in Law</option>
+                        <option value="SL">Sister-in-law</option>
+                        <option value="SN">Son-in-law</option>
+                        <option value="DL">Daughter in Law</option>
+                        <option value="UN">Uncle</option>
+                        <option value="CO">Cousin</option>
+                        <option value="FL">Father-in-law</option>
+                        <option value="GD">Grand daughter</option>
+                        <option value="GF">Grand Father</option>
+                        <option value="GM">Grand Mother</option>
+                        <option value="GS">Grand son</option>
+                        <option value="FR">Friend</option>
+                        <option value="DO">Doctor</option>
+                        <option value="JU">Judge</option>
+                        <option value="LA">Lawyer</option>
+                        <option value="MI">Minister</option>
+                        <option value="ML">Mother-in-law</option>
+                        <option value="NB">Neighbour</option>
+                        <option value="NP">Nephew</option>
+                        <option value="NG">NGO</option>
+                        <option value="NC">Niece</option>
+                        <option value="OT">Others</option>
+                        <option value="PO">Police</option>
+                        <option value="SELECT">SELECT</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Identity Proof
+                      </div>
+                      <select name=""  onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlIdProof\',\'\')', 0)"
+                      id="ContentPlaceHolder1_ddlIdProof" class="chosen-select " >
+                        <option selected="selected" value="SELECT">SELECT</option>
+                        <option value="3">VOTER ID</option>
+                        <option value="4">PASSPORT</option>
+                        <option value="5">DRIVING LICENSE</option>
+                        <option value="1">PAN</option>
+                        <option value="0">NOT AVAILABLE</option>
+                        <option value="2">OTHERS</option>
+                        <option value="SELECT">SELECT</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        ID Number
+                        <span id="ContentPlaceHolder1_Label9" style="color:Red;">*</span>
+                        <span id="ContentPlaceHolder1_RequiredFieldValidator6" class="red_text" style="visibility:hidden;"></span>
+                      </div>
+                      <input name="idNumber" formControlName="idNumber" type="text"
+                        value="NA" maxlength="150"
+                        id="idNumber"
+                        style="border-width:1px;border-style:solid;text-transform: uppercase"
+                        (ngModel)="visitorDataDto.idNumber"
+                      >
+                      <span style="display: block;">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <div class="signup_texthead" style="color: red; font-size: 15px; font-weight: bold;">
+                        **Note: Please carry a valid id and address proof at the time of visit in jail.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Email ID
+                        <span id="ContentPlaceHolder1_RegularExpressionValidator2" class="red_text" style="visibility:hidden;">Incorrect Email ID</span>
+                        <span id="ContentPlaceHolder1_rfvEmail" style="display:none;"></span>
+                      </div>
+                      <input name="email" formControlName="email" type="email"
+                        maxlength="50" id="email"
+                        style="border-width:1px;border-style:solid;"
+                        (ngModel)="visitorDataDto.email"
+                        >
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-6">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Mobile No
+                        <span id="ContentPlaceHolder1_RegularExpressionValidator2" class="red_text" style="visibility:hidden;">Incorrect Email ID</span>
+                        <span id="ContentPlaceHolder1_rfvEmail" style="display:none;"></span>
+                      </div>
+                      <input name="mobile" formControlName="mobile"
+                        type="text" maxlength="50" id="mobile"
+                        style="border-width:1px;border-style:solid;"
+                        (ngModel)="visitorDataDto.mobile"
+                        >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  <!-- Form TO Meet -->
+        <div class="col-sm-6 col-lg-6">
+          <div class="ContentPlaceHolder1_UpdatePanelVisitor">
+            <div class="panel-default">
+              <div class="panel-heading">
+                <div class="panel-title">
+                  To Meet
+                </div>
+              </div>
+              <div class="boder">
+                <div class="row">
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        Country
+                        <span id="ContentPlaceHolder1_Label1" style="color:Red;">*</span>
+                      </div>
+                      <select name="" formControlName="country"  [(ngModel)]="countrySelected" (ngModelChange)="onCountrySelected($event)"  id="ContentPlaceHolder1_ddlState" class="chosen-select ">
+                        <option selected="selected" *ngFor="let country of listCountry" [value]="country.iso2">
+                          {{country.name}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        State
+                        <span id="ContentPlaceHolder1_Label1" style="color:Red;">*</span>
+                      </div>
+                      <select name="" formControlName="state"  [(ngModel)]="selectedState" (ngModelChange)="onStateSelected()" id="ContentPlaceHolder1_ddlState" class="chosen-select ">
+                        <option selected="selected" *ngFor="let state of listState" [value]="state.iso2">
+                          {{state.name}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-lg-4">
+                    <div class="form-group">
+                      <div class="signup_texthead">
+                        City
+                        <span id="ContentPlaceHolder1_Label1" style="color:Red;">*</span>
+                      </div>
+                      <select name="" formControlName="city"  id="ContentPlaceHolder1_ddlState" class="chosen-select ">
+                        <option selected="selected" *ngFor="let city of listCity" [value]="city.id">
+                          {{city.name}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="signup_texthead">
+                                Visit Date
+                            </div>
+                            <div class="input-group">
+                                <input name="ctl00$ContentPlaceHolder1$txtVisitDate" type="date" value="01/06/2023" id="ContentPlaceHolder1_txtVisitDate" class="date_wid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="signup_texthead">
+                                Additional Visitors
+                            </div>
+                            <input name="" formControlName="addVisitors" type="text" value="0" maxlength="1" id="ContentPlaceHolder1_txtAdditionalVisitors" style="border-width:1px;border-style:solid;">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <div class="signup_texthead">
+                                Additional Visitors Name
+                            </div>
+                            <input name="" formControlName="addVisitorsName" type="text" maxlength="150" id="ContentPlaceHolder1_txtAddnlVisName" style="border-width:1px;border-style:solid;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-6">
+                      <div class="form-group">
+                          <div class="signup_texthead">
+                              Prisoner Name &nbsp;<span id="ContentPlaceHolder1_Label23" style="color:Red;">*</span>
+                          </div>
+                          <input name="" formControlName="prisonerFName" type="text" maxlength="30" id="ContentPlaceHolder1_txtPrisonerName" style="border-width:1px;border-style:solid;text-transform: uppercase" class="watermarked">
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-6">
+                      <div class="form-group">
+                          <div class="signup_texthead">
+                              &nbsp;<span id="ContentPlaceHolder1_Label4">Father Name</span><span id="ContentPlaceHolder1_Label24" style="color:Red;">*</span>
+                          </div>
+                          <input name="" formControlName="prisonerLName" type="text" maxlength="100" id="ContentPlaceHolder1_txtPrisonerFatherName" style="border-width:1px;border-style:solid;" class="watermarked">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            Prisoner Age
+                        </div>
+                        <input name="" formControlName="prisonerAge" type="text" maxlength="18" id="ContentPlaceHolder1_TxtPrisonerAge" style="border-width:1px;border-style:solid;" class="watermarked">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            <span id="ContentPlaceHolder1_Label2"> Gender&nbsp;</span><span id="ContentPlaceHolder1_Label25" style="color:Red;">*</span>
+                        </div>
+                        <select name="" formControlName="genderP" id="ContentPlaceHolder1_ddlprisonsGender" class="chosen-select " >
+                                <option value="SELECT">SELECT</option>
+                                <option value="F">Female</option>
+                                <option value="M">Male</option>
+                                <option value="SELECT">SELECT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-info text-bold" (click)="RegisterVisit()">submit</button>
+              </div>
+            </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+    </div>
+  </div>
+</div>
+<!--
+
+<div>
+  <h1 style="color: #fff;">hhhhhhhhhhhhhhhhhhhhhhh</h1>
+  <h1 style="color: #fff;">hhhhhhhhhhhhhhhhhhhhhhh</h1>
+  <h1 style="color: #fff;">hhhhhhhhhhhhhhhhhhhhhhh</h1>
+</div> -->
+
+<!-- <app-footer-second></app-footer-second> -->
+<app-footer-secondary></app-footer-secondary>
